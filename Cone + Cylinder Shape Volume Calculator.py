@@ -134,7 +134,7 @@ while yesorno == "yes":
   print ("The volume of the shape is", volumeofshape, "cubic", output_unit)
 
   # Asks user whether they want to run the program again, to obtain string value for varaible "yesorno", which will be used to determine whether the loop will run again
-  yesorno = str(input("Would you like to run it again?"))
+  yesorno = str(input("Would you like to run it again? \ n"))
 
   #  wait for 5 seconds to clear screen
   sleep(5)
