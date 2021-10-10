@@ -34,7 +34,7 @@ while yesorno == "yes":
   from time import sleep
   # Defining the screen clear function so it may be called at the end of the loop
   def screen_clear():
-    # name method is used to get information about the OS from the OS module imported above, info such as name, release, version of the OSsince each has its own clear screen command
+    # name method is used to get information about the OS from the OS module imported above, info such as name, release, version of the OS since each has its own clear screen command
     
     if os.name == 'posix':
       # for mac and linux(here, os.name is 'posix')
