@@ -44,14 +44,8 @@ while yesorno == "yes":
 
 
 
-  # Outputs prompt for user to enter string value for the metric unit they wish their answer to be in, stored in the variable "output_unt"
-  output_unit = str(input("Enter the metric unit you wish your answer to be in: \n"))
-  # String value is converted to lower case to avoid errors, and allow values to be matched with an if statement come the sorting and conversion process of units of measurement below
-  output_unit = output_unit.lower()  
-
-
   # Outputs prompt for user to enter the value of the height of the shape, stored in variable "heightofshape"
-  heightofshape = float(input("Enter the height of the shape (without metric unit): \n"))
+  heightofshape = float(input("Wekcome! This program calculates the volume of a shape composed of a cylinder and a cone vertically stacked on top of each other, whose heights are exactly half of the height of the overall shape. \n \n Please enter the height of the shape (without metric unit) to continue: \n"))
 
   # Outputs prompt for user to enter string value for the metric unit for the height of the shape
   unit_of_measurement_height = str(input("Enter the metric unit of the height of your shape: \n"))
@@ -66,15 +60,19 @@ while yesorno == "yes":
   # String value is converted to lower case to avoid errors, and allow values to be matched with an if statement come the sorting and conversion process of units of measurement below
   unit_of_measurement_diameter = unit_of_measurement_diameter.lower()
 
+  # Outputs prompt for user to enter string value for the metric unit they wish their answer to be in, stored in the variable "output_unt"
+  output_unit = str(input("Enter the metric unit you wish your answer to be in: \n"))
+  # String value is converted to lower case to avoid errors, and allow values to be matched with an if statement come the sorting and conversion process of units of measurement below
+  output_unit = output_unit.lower()  
 
-
+  
+  
   # Conversion of the real numbers of the height and diameter based on their respective metric units so the answer will be proportionate to the metric unit the user wants to their answer to be outputted in
 
   # If diameter is in m and height is in cm and user wants output to be in cubic metres
   if unit_of_measurement_diameter == "m" and unit_of_measurement_height == "cm" and output_unit == "m":
     
     heightofshape =  heightofshape/100
-
 
   # elif unit_of_measurement_diameter == "m" and unit_of_measurement_height == "m" and output_unit == "m": Both are in metres, no conversion needed
 
@@ -88,8 +86,6 @@ while yesorno == "yes":
 
     diameterofshape  =  diameterofshape/100
     heightofshape =  heightofshape/100
-
-
 
   # If diameter is in m and height is in cm and user wants output to be in cubic centimetres
   elif unit_of_measurement_diameter == "m" and unit_of_measurement_height == "cm" and output_unit == "cm":
@@ -106,7 +102,6 @@ while yesorno == "yes":
   elif unit_of_measurement_diameter == "cm" and unit_of_measurement_height == "m" and output_unit == "cm":
 
     heightofshape = heightofshape*100
-
 
   # elif unit_of_measurement_diameter == "cm" and unit_of_measurement_height == "cm" and output_unit == "cm": Both are in centimetres, no conversion needed
 
@@ -139,10 +134,16 @@ while yesorno == "yes":
   print ("The volume of the shape is", volumeofshape, "cubic", output_unit)
 
   # Asks user whether they want to run the program again, to obtain string value for varaible "yesorno", which will be used to determine whether the loop will run again
-  yesorno = str(input("Would you like to run it again? \ n"))
+  yesorno = str(input("Would you like to run it again? \n"))
 
-  #  wait for 5 seconds to clear screen
-  sleep(5)
+  #  wait for 4 seconds to clear screen, whilst showing user program is loading (bit of animation, no real purpose)
+  sleep(1)
+  print ("Loading...")
+  sleep(1)
+  print ("Loading...")
+  sleep(1)
+  print ("Loading...")
+  sleep(1)
 
   #  now call clear screen function defined above
   screen_clear()
