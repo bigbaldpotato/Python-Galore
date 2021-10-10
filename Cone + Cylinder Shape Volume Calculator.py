@@ -1,3 +1,8 @@
+# Cone + Volume Shape Calculator
+# By Jim Xu
+# October 9, 2021
+# This application calculates the volume of a shape composed of a cylinder and a cone vertically stacked on top of each other, whose heights are exactly half of the height of the overall shape
+
 # Import math module to use mathematical methods (ex. math.pi) for integers and real numbers
 import math
 
